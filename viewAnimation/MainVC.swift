@@ -75,12 +75,14 @@ class MainVC: UIViewController {
     
     private func setupUI() {
         
+        title = "Animation"
+        
         view.addSubview(toggleView)
         toggleView.backgroundColor = .clear
         toggleView.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
             make.bottom.equalToSuperview()
-            make.height.equalTo(70)
+            make.height.equalTo(90)
         }
         
         toggleView.addSubview(buttonContainer)
@@ -155,7 +157,7 @@ class MainVC: UIViewController {
                 
                 UIView.animate(withDuration: 0.4) {
                     self.toggleView.snp.updateConstraints { make in
-                        make.height.equalTo(70)
+                        make.height.equalTo(90)
                     }
                     self.view.layoutIfNeeded()
                     
